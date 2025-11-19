@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Programming Software</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      background: url("https://i.pinimg.com/1200x/4b/bc/5c/4bbc5c7f9365f56b36f3806bb40a1b9a.jpg") no-repeat center center/cover;
+      font-family: 'Lora', serif;
+      color: #2b1d17;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(236, 229, 222, 0.65);
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      background: rgba(251, 220, 204, 0.8);
+      padding: 2rem 3rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      backdrop-filter: blur(4px);
+    }
+
+    .title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(to right, #c28b34, #ffb347);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      margin-bottom: 1rem;
+    }
+
+    .eye {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #4b3e39;
+    }
+
+    .select-btn {
+      background-color: #4b3e39;
+      color: white;
+      padding: 0.6rem 1.5rem;
+      border-radius: 10px;
+      margin-top: 1.5rem;
+      display: inline-block;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .select-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .resources {
+      display: none;
+      margin-top: 2rem;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 1.5rem;
+      border-radius: 15px;
+      text-align: left;
+      color: #3a2b25;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* When SELECT is clicked */
+    #resources:target {
+      display: block;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .resources h2 {
+      margin-bottom: 1rem;
+      color: #4b3e39;
+    }
+
+    ul {
+      margin-top: 1rem;
+      list-style-type: "💻";
+      padding-left: 1rem;
+    }
+
+    li {
+      margin: 8px 0;
+      font-size: 1.1rem;
+    }
+
+    a.resource-link {
+      color: #a5672e;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a.resource-link:hover {
+      color: #d48a3d;
+      text-decoration: underline;
+    }
+
+    .next-btn {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: #4b3e39;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .back-arrow {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      font-size: 1.5rem;
+      color: #4b3e39;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <div class="title">Programming Software</div>
+    <div class="eye">👁️‍🗨️</div>
+    <p>
+      Programming software provides the environment and tools that make it possible for people to 
+      <strong>create other types of software — like apps, games, and operating systems.</strong>
+    </p>
+
+    <!-- Button to open resources -->
+    <a href="#resources" class="select-btn">SELECT</a>
+
+    <!-- Hidden section -->
+    <div id="resources" class="resources">
+      <h2>📚 Programming Software Resources</h2>
+      <ul>
+        <li><a href="https://www.w3schools.com/" target="_blank" class="resource-link">W3Schools – Learn Web Development</a></li>
+        <li><a href="https://www.geeksforgeeks.org/" target="_blank" class="resource-link">GeeksforGeeks – Programming Tutorials</a></li>
+        <li><a href="https://www.codecademy.com/" target="_blank" class="resource-link">Codecademy – Interactive Coding Lessons</a></li>
+        <li><a href="https://www.freecodecamp.org/" target="_blank" class="resource-link">FreeCodeCamp – Free Coding Courses</a></li>
+        <li><a href="https://developer.mozilla.org/" target="_blank" class="resource-link">MDN Web Docs – Developer Guides</a></li>
+      </ul>
+      <a href="#" class="select-btn" style="margin-top: 1rem;">Close</a>
+    </div>
+  </div>
+
+  <a href="e-4.html" class="next-btn">NEXT →</a>
+  <a href="e-2.html" class="back-arrow">←</a>
+
+</body>
+</html>
+

@@ -1,0 +1,196 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>System Software</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      background: url("https://i.pinimg.com/736x/af/35/6b/af356bcd5bb4eb33c7df6c24635d84c4.jpg")
+        no-repeat center center/cover;
+      font-family: 'Lora', serif;
+      color: #2b1d17;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* overlay for readability */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(235, 230, 225, 0.65);
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      background: rgba(251, 220, 204, 0.8);
+      padding: 2rem 3rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      backdrop-filter: blur(4px);
+    }
+
+    .title {
+      font-size: 4rem;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(to right, #c28b34, #ffb347);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      margin-bottom: 1.5rem;
+    }
+
+    .eye {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #4b3e39;
+    }
+
+    .select-btn {
+      background-color: #4b3e39;
+      color: white;
+      padding: 0.6rem 1.5rem;
+      border-radius: 10px;
+      margin-top: 1.5rem;
+      display: inline-block;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .select-btn:hover {
+      transform: scale(1.05);
+    }
+  
+    .resources {
+      display: none;
+      margin-top: 2rem;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 1.5rem;
+      border-radius: 15px;
+      text-align: left;
+      color: #3a2b25;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+     /* When SELECT is clicked */
+    #resources:target {
+      display: block;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .resources h2 {
+      margin-bottom: 1rem;
+      color: #4b3e39;
+    }
+
+    ul {
+      margin-top: 1rem;
+      list-style-type: "📘 ";
+      padding-left: 1rem;
+    }
+
+    li {
+      margin: 8px 0;
+      font-size: 1.1rem;
+    }
+
+    a.resource-link {
+      color: #a5672e;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a.resource-link:hover {
+      color: #d48a3d;
+      text-decoration: underline;
+    }
+
+    .next-btn {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: #4b3e39;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .back-arrow {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      font-size: 1.5rem;
+      color: #4b3e39;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <div class="title">System Hardware</div>
+    <div class="eye">👁️‍🗨️</div>
+    <p>
+      System software is a type of computer program that helps the computer’s hardware and application software work together.
+      It acts as the <strong>bridge between the user, the applications, and the hardware of a computer.</strong>
+    </p>
+    
+   <!-- Button to open resources -->
+    <a href="#resources" class="select-btn">SELECT</a>
+
+    <!-- Hidden section -->
+    <div id="resources" class="resources">
+      <h2>📚 Library Resources</h2>
+      <ul>
+        <li><a href="https://www.coursera.org/browse/computer-science/software-development" target="_blank" class="resource-link">coursera – Software Development</a></li>
+        <li><a href="https://www.techtarget.com/searchapparchitecture/definition/software" target="_blank" class="resource-link">TechTarget – what is software?</a></li>
+        <li><a href="https://www.futurelearn.com/subjects/it-and-computer-science-courses/software-development" target="_blank" class="resource-link">Future Learn – Software Development Courses</a></li>
+        <li><a href="https://www.academyoflearning.com/programs/ontario/software-and-web-developer/" target="_blank" class="resource-link">AOLCC – Software</a></li>
+      </ul>
+      <a href="#" class="select-btn" style="margin-top: 1rem;">Close</a>
+    </div>
+  </div>
+
+  <a href="e-3.html" class="next-btn">NEXT →</a>
+  <div class="back-arrow"></div>
+  <a href="e-3.html" class="back-arrow">←</a>
+</body>
+</html>
